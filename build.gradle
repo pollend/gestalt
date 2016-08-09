@@ -6,10 +6,20 @@
  */
 apply plugin: 'project-report'
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+
 allprojects {
     apply plugin: 'idea'
     
-    group = 'org.terasology'
+    group = 'org.terasology.retrogestalt'
 
     // Declare remote repositories we're interested in - library files will be fetched from here
     repositories {

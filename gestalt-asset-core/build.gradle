@@ -5,6 +5,18 @@
  * - View tasks for this project: $ gradlew tasks
  */
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+    }
+}
+
+apply plugin: 'me.tatarka.retrolambda'
+
 // Primary dependencies definition
 dependencies {
     compile project(":gestalt-util")
