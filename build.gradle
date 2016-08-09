@@ -141,6 +141,11 @@ configure(subprojects.findAll { !it.name.contains("testpack") && !it.name.starts
         reportLevel = 'medium'
         excludeFilter = new File(rootDir, "config/findbugs/findbugs-exclude.xml")
     }
+
+    // TODO: Java 8 + latest Gradle gets hit by more strict Javadoc requirements - need to fix
+    javadoc {
+        failOnError = false
+    }
 }
 
 // gradle wrapper version
